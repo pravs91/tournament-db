@@ -42,6 +42,7 @@ def countPlayers():
     c = conn.cursor()
     c.execute("SELECT count(*) FROM player;")
     count = c.fetchone()
+    conn.close()
     return count[0]
 
 def registerPlayer(name):
